@@ -1,0 +1,156 @@
+/* === GLOBAL VARIABLES === */
+
+:root {
+    --heading-font-family: "CodeNewRoman";
+    --primary-color: #f0f8ff;
+    /* --accent-color: #add8e6; */
+    --background-color: #101827;
+}
+
+/* === FONTS === */
+
+/* == Giphurs == */
+
+@font-face {
+    font-family: "Giphurs";
+    font-weight: normal;
+    src:
+        url("assets/fonts/Giphurs/Regular/Giphurs-Regular.woff2")
+            format("woff2"),
+        url("assets/fonts/Giphurs/Regular/Giphurs-Regular.otf")
+            format("opentype"),
+        url("assets/fonts/Giphurs/Regular/Giphurs-Regular.ttf")
+            format("truetype");
+}
+
+@font-face {
+    font-family: "Giphurs";
+    font-weight: bold;
+    src:
+        url("assets/fonts/Giphurs/Bold/Giphurs-Bold.woff2") format("woff2"),
+        url("assets/fonts/Giphurs/Bold/Giphurs-Bold.otf") format("opentype"),
+        url("assets/fonts/Giphurs/Bold/Giphurs-Bold.ttf") format("truetype");
+}
+
+/* == Space Mono == */
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: normal;
+    font-style: normal;
+    src: url("assets/fonts/SpaceMono/SpaceMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: normal;
+    font-style: italic;
+    src: url("assets/fonts/SpaceMono/SpaceMono-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: bold;
+    font-style: normal;
+    src: url("assets/fonts/SpaceMono/SpaceMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: bold;
+    font-style: italic;
+    src: url("assets/fonts/SpaceMono/SpaceMono-BoldItalic.ttf")
+        format("truetype");
+}
+
+/* == Code New Roman == */
+
+@font-face {
+    font-family: "CodeNewRoman";
+    font-weight: normal;
+    font-style: normal;
+    src:
+        url("assets/fonts/CodeNewRoman/Regular/CodeNewRoman-Regular.woff")
+            format("woff"),
+        url("assets/fonts/CodeNewRoman/Regular/CodeNewRoman-Regular.otf")
+            format("opentype");
+}
+
+@font-face {
+    font-family: "CodeNewRoman";
+    font-weight: normal;
+    font-style: italic;
+    src:
+        url("assets/fonts/CodeNewRoman/Italic/CodeNewRoman-Italic.woff")
+            format("woff"),
+        url("assets/fonts/CodeNewRoman/Italic/CodeNewRoman-Italic.otf")
+            format("opentype");
+}
+
+@font-face {
+    font-family: "CodeNewRoman";
+    font-weight: bold;
+    font-style: normal;
+    src:
+        url("assets/fonts/CodeNewRoman/Bold/CodeNewRoman-Bold.woff")
+            format("woff"),
+        url("assets/fonts/CodeNewRoman/Bold/CodeNewRoman-Bold.otf")
+            format("opentype");
+}
+
+/* === DOCUMENT STYLING === */
+
+body {
+    font-family: "Giphurs";
+    padding: 20px 5%;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* === HEADERS === */
+
+h1 {
+    font-family: var(--heading-font-family);
+}
+
+h2 {
+    font-family: var(--heading-font-family);
+}
+
+h3 {
+    font-family: var(--heading-font-family);
+}
+
+h4 {
+    font-family: var(--heading-font-family);
+}
+
+h5 {
+    font-family: var(--heading-font-family);
+}
+
+h6 {
+    font-family: var(--heading-font-family);
+}
+
+/* === LINKS === */
+
+/* unvisited link */
+a:link {
+    color: lightskyblue;
+}
+
+/* visited link */
+a:visited {
+    color: lightblue;
+}
+
+/* mouse over link */
+a:hover {
+    color: deepskyblue;
+}
+
+/* selected link */
+a:active {
+    color: deepskyblue;
+}
