@@ -3,6 +3,7 @@
 :root {
     --heading-font-family: "CodeNewRoman";
     --primary-color: #f0f8ff;
+    --secondary-color: #abc1d4;
     /* --accent-color: #add8e6; */
     --background-color: #101827;
 }
@@ -101,10 +102,25 @@
 /* === DOCUMENT STYLING === */
 
 body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     font-family: "Giphurs";
-    padding: 20px 5%;
     background-color: var(--background-color);
     color: var(--primary-color);
+}
+
+#page-container {
+    padding: 20px 5%;
+}
+
+@media only screen and (min-width: 1000px) {
+    #page-container {
+        width: 800px;
+        padding: 20px 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* === HEADERS === */
@@ -150,7 +166,62 @@ a:hover {
     color: deepskyblue;
 }
 
-/* selected link */
-a:active {
-    color: deepskyblue;
+a.unstyled-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* === ELEMENT SPECIFIC STYLING === */
+
+#name {
+    margin-bottom: 0.15rem;
+    text-align: center;
+}
+
+#role-desc {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    font-style: italic;
+    text-align: center;
+}
+
+#tagline {
+    margin-top: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* === CLASSES === */
+
+.section-header {
+}
+
+.clean-list {
+    list-style-type: none;
+}
+
+.clean-list-item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.clean-list-item-content {
+    padding: 0.25rem;
+}
+
+.clean-list-item-content > * {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-block > * {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtle-text {
+    color: var(--secondary-color);
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
 }
