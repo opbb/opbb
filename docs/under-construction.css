@@ -1,0 +1,140 @@
+:root {
+    --animation-duration: 3s;
+    --delay-length: calc(
+        var(--animation-duration) / 2 - var(--animation-duration)
+    );
+    --hammer-height: 2rem;
+}
+
+.hammer {
+    width: 3rem;
+    height: calc(2 * var(--hammer-height));
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hammer-head {
+    width: calc(var(--hammer-height) * 0.6);
+    height: calc(var(--hammer-height) * 0.4);
+    background-color: var(--primary-color);
+}
+
+.hammer-haft {
+    width: calc(var(--hammer-height) * 0.16);
+    height: calc(var(--hammer-height) * 0.6);
+    background-color: var(--primary-color);
+}
+
+.left-hammer {
+    animation-name: left-hammer-swing;
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.right-hammer {
+    animation-name: right-hammer-swing;
+    animation-duration: var(--animation-duration);
+    animation-delay: var(--delay-length);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes left-hammer-swing {
+    0% {
+        transform: rotate(20deg);
+    }
+
+    80% {
+        transform: rotate(-15deg);
+    }
+
+    90% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes right-hammer-swing {
+    0% {
+        transform: rotate(-20deg);
+    }
+
+    80% {
+        transform: rotate(15deg);
+    }
+
+    90% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+#page-container {
+    height: 90vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#bouncing-text-container {
+    height: calc(2 * var(--hammer-height));
+    width: calc(var(--hammer-height) * 10);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0 var(--hammer-height * 0.2);
+}
+
+#bouncing-text {
+    height: calc(2 * var(--hammer-height));
+    padding-top: var(--hammer-height * 0.2);
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-size: var(--hammer-height * 0.4);
+    text-align: center;
+}
+
+#left-bouncing-text-padding {
+    animation-name: text-bounce;
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    flex-shrink: 1;
+}
+
+#right-bouncing-text-padding {
+    animation-name: text-bounce;
+    animation-duration: var(--animation-duration);
+    animation-delay: var(--delay-length);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    flex-shrink: 1;
+}
+
+@keyframes text-bounce {
+    0% {
+        flex-grow: 0;
+    }
+
+    50% {
+        flex-grow: 1;
+    }
+    100% {
+        flex-grow: 0;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    :root {
+        --hammer-height: 5rem;
+    }
+}

@@ -1,0 +1,227 @@
+/* === GLOBAL VARIABLES === */
+
+:root {
+    --heading-font-family: "CodeNewRoman";
+    --primary-color: #f0f8ff;
+    --secondary-color: #abc1d4;
+    /* --accent-color: #add8e6; */
+    --background-color: #101827;
+}
+
+/* === FONTS === */
+
+/* == Giphurs == */
+
+@font-face {
+    font-family: "Giphurs";
+    font-weight: normal;
+    src:
+        url("assets/fonts/Giphurs/Regular/Giphurs-Regular.woff2")
+            format("woff2"),
+        url("assets/fonts/Giphurs/Regular/Giphurs-Regular.otf")
+            format("opentype"),
+        url("assets/fonts/Giphurs/Regular/Giphurs-Regular.ttf")
+            format("truetype");
+}
+
+@font-face {
+    font-family: "Giphurs";
+    font-weight: bold;
+    src:
+        url("assets/fonts/Giphurs/Bold/Giphurs-Bold.woff2") format("woff2"),
+        url("assets/fonts/Giphurs/Bold/Giphurs-Bold.otf") format("opentype"),
+        url("assets/fonts/Giphurs/Bold/Giphurs-Bold.ttf") format("truetype");
+}
+
+/* == Space Mono == */
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: normal;
+    font-style: normal;
+    src: url("assets/fonts/SpaceMono/SpaceMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: normal;
+    font-style: italic;
+    src: url("assets/fonts/SpaceMono/SpaceMono-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: bold;
+    font-style: normal;
+    src: url("assets/fonts/SpaceMono/SpaceMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SpaceMono";
+    font-weight: bold;
+    font-style: italic;
+    src: url("assets/fonts/SpaceMono/SpaceMono-BoldItalic.ttf")
+        format("truetype");
+}
+
+/* == Code New Roman == */
+
+@font-face {
+    font-family: "CodeNewRoman";
+    font-weight: normal;
+    font-style: normal;
+    src:
+        url("assets/fonts/CodeNewRoman/Regular/CodeNewRoman-Regular.woff")
+            format("woff"),
+        url("assets/fonts/CodeNewRoman/Regular/CodeNewRoman-Regular.otf")
+            format("opentype");
+}
+
+@font-face {
+    font-family: "CodeNewRoman";
+    font-weight: normal;
+    font-style: italic;
+    src:
+        url("assets/fonts/CodeNewRoman/Italic/CodeNewRoman-Italic.woff")
+            format("woff"),
+        url("assets/fonts/CodeNewRoman/Italic/CodeNewRoman-Italic.otf")
+            format("opentype");
+}
+
+@font-face {
+    font-family: "CodeNewRoman";
+    font-weight: bold;
+    font-style: normal;
+    src:
+        url("assets/fonts/CodeNewRoman/Bold/CodeNewRoman-Bold.woff")
+            format("woff"),
+        url("assets/fonts/CodeNewRoman/Bold/CodeNewRoman-Bold.otf")
+            format("opentype");
+}
+
+/* === DOCUMENT STYLING === */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Giphurs";
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+#page-container {
+    padding: 20px 5%;
+}
+
+@media only screen and (min-width: 1000px) {
+    #page-container {
+        width: 800px;
+        padding: 20px 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* === HEADERS === */
+
+h1 {
+    font-family: var(--heading-font-family);
+}
+
+h2 {
+    font-family: var(--heading-font-family);
+}
+
+h3 {
+    font-family: var(--heading-font-family);
+}
+
+h4 {
+    font-family: var(--heading-font-family);
+}
+
+h5 {
+    font-family: var(--heading-font-family);
+}
+
+h6 {
+    font-family: var(--heading-font-family);
+}
+
+/* === LINKS === */
+
+/* unvisited link */
+a:link {
+    color: lightskyblue;
+}
+
+/* visited link */
+a:visited {
+    color: lightblue;
+}
+
+/* mouse over link */
+a:hover {
+    color: deepskyblue;
+}
+
+a.unstyled-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* === ELEMENT SPECIFIC STYLING === */
+
+#name {
+    margin-bottom: 0.15rem;
+    text-align: center;
+}
+
+#role-desc {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    font-style: italic;
+    text-align: center;
+}
+
+#tagline {
+    margin-top: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* === CLASSES === */
+
+.section-header {
+}
+
+.clean-list {
+    list-style-type: none;
+}
+
+.clean-list-item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.clean-list-item-content {
+    padding: 0.25rem;
+}
+
+.clean-list-item-content > * {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-block > * {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtle-text {
+    color: var(--secondary-color);
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+}
